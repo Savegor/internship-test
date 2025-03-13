@@ -2,8 +2,8 @@ $bg-color: #fff //container background-color;
 $basic-dark-color: #212121 //color of the spinner
 $border-width: 4px //width of spinners border
 $basic-spinner-dimensions: 125px //width and height of spinner
-$main-spinner-dimensions: $basic-spinner-dimensions - $border-width * 2 //width and height of bigger circle
-$small-spinner-dimensions: $main-spinner-dimensions * 0.7 //width and height of smaller circle
+$main-spinner-dimensions: calc($basic-spinner-dimensions - calc($border-width * 2)) //width and height of bigger circle
+$small-spinner-dimensions: calc($main-spinner-dimensions * 0.7) //width and height of smaller circle
 
 .spinnerBlock
     display: flex
@@ -55,8 +55,8 @@ $small-spinner-dimensions: $main-spinner-dimensions * 0.7 //width and height of 
         border-right-color: $basic-dark-color
         border-top-color: rgba($basic-dark-color, 0)
         border-left-color: rgba($basic-dark-color, 0)
-        top: ($main-spinner-dimensions - $small-spinner-dimensions) / 2
-        left: ($main-spinner-dimensions - $small-spinner-dimensions) / 2
+        top: calc($main-spinner-dimensions - $small-spinner-dimensions) / 2
+        left: calc($main-spinner-dimensions - $small-spinner-dimensions) / 2
         animation: anti-rotate-animation 0.85s linear 0s infinite
 
 // https://github.com/eisenfox/css-spinners
