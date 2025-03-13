@@ -1,2 +1,2 @@
-install docker and run docker compose up
-port 3000
+install docker and run "docker compose up";
+port 3000;
