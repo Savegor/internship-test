@@ -1,0 +1,87 @@
+.Box
+    margin-bottom: 24px
+    user-select: none
+    h2
+        font-size: 1.8rem
+        font-weight: 700
+        color: #292929
+        margin-bottom: 24px
+    h3
+        font-size: 1.6rem
+        font-weight: 600
+        color: #363636
+        margin-bottom: 16px
+    input
+        padding: 5px
+        font-size: 20px
+    label
+        font-size: 20px
+        font-weight: 600
+    .BoxTitleBtn
+        cursor: pointer
+        position: relative
+        &::after
+            content: url('../icons/arrowDown.svg')
+            width: 25px
+            height: 25px
+            position: absolute
+            top: 10%
+        &.active
+            &::after
+                content: url('../icons/arrowUp.svg')
+    &Filters.active
+        display: none
+    .topFilter
+        display: flex
+        flex-direction: row
+        row-gap: 20px
+        column-gap: 20px
+        margin-bottom: 18px
+        flex-wrap: wrap
+        input
+            margin-left: 14px
+        &Sum
+            &Content
+                display: flex
+                align-items: center
+                column-gap: 18px
+                flex-wrap: wrap
+                row-gap: 20px
+        &Date
+            &Content
+                display: flex
+                align-items: center
+                column-gap: 18px
+                flex-wrap: wrap
+                row-gap: 20px
+
+    .bottomFilter
+        &Content
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            row-gap: 20px
+            column-gap: 24px
+            color: #424242
+            label
+                display: flex
+                column-gap: 10px
+                background-color: #808080
+                padding: 10px
+
+@media ( max-width: 1200px)
+    .Box
+        margin-bottom: 14px
+@media ( max-width: 992px)
+    .Box
+        h2
+            font-size: 26px
+        h3
+            font-size: 22px
+        input, label
+            font-size: 18px
+
+@media (max-width: 768px)
+    .Box
+        input, label
+            font-size: 16px

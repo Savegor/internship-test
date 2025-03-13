@@ -1,0 +1,11 @@
+version: '2.24.6-desktop.1'
+services:
+  ui:
+    build: .
+    container_name: ui
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true

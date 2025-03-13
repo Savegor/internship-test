@@ -1,0 +1,83 @@
+table
+    width: 100%
+    border-spacing: 0
+    margin-bottom: 20px
+    thead
+        line-height: 50px
+        z-index: 10
+        border: 10px solid #000
+        tr
+            .timeTitle
+                position: relative
+                padding-right: 25px
+                &:hover
+                    cursor: pointer
+                &::after
+                    content: url("../icons/arrowDown.svg")
+                    width: 25px
+                    height: 25px
+                    position: absolute
+                    top: 10%
+                    // right: 10px
+                &.active
+                    &::after
+                        content: url("../icons/arrowUp.svg")
+            th:last-child
+                text-align: end
+    th
+        font-size: 24px
+        font-weight: 500
+        color: #424242
+        user-select: none
+.payment
+    font-size: 18px
+    font-weight: 400
+    color: #000
+    line-height: 32px
+    position: relative
+    .time
+        text-align: center
+    .sum
+        text-align: end
+
+.DayMonth
+    background-color: #808080
+    text-align: start
+    &Year
+        margin-left: 5px
+    th
+        line-height: 30px
+        font-size: 20px
+        font-weight: 400
+        color: #000
+
+@media ( max-width: 1200px)
+    .DayMonth
+        th
+            font-size: 18px
+
+@media ( max-width: 992px)
+    table
+        th
+            font-size: 24px
+        td
+            font-size: 16px
+
+    .DayMonth
+        th
+            font-size: 16px
+@media (max-width: 768px)
+    table
+        th
+            font-size: 18px
+        td
+            font-size: 14px
+    .DayMonth
+        th
+            font-size: 14px
+        &Year
+            display: none
+
+@media (max-width: 568px)
+    table, th, td
+        border: 1px solid white

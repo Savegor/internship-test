@@ -1,0 +1,68 @@
+.App
+    .content
+        padding: 0 300px
+    .title
+        margin-top: 100px
+        font-size: 42px
+        margin-bottom: 32px
+        font-weight: 900
+        color: #000
+        user-select: none
+    .paginations
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        .btn
+            background-color: #bebebe
+            color: #000
+            transition: .3s color
+            font-size: 18px
+            width: 25px
+            height: 25px
+            background-repeat: no-repeat
+            background-size: cover
+            &Prev
+                background-image: url('../icons/arrowLeft.svg')
+            &Next
+                background-image: url('../icons/arrowRight.svg')
+            &:hover
+                color: #808080
+                font-size: 20px
+
+@media ( max-width: 1440px)
+    .App
+        .content
+            padding: 0 190px
+        .title
+            margin-top: 80px
+
+@media ( max-width: 1200px)
+    .App
+        .content
+            padding: 0 100px
+        .title
+            margin-top: 60px
+            margin-bottom: 28px
+            font-size: 38px
+
+@media ( max-width: 992px)
+    .App
+        .content
+            padding: 0 60px
+        .title
+            margin-top: 40px
+            margin-bottom: 24px
+            font-size: 32px
+
+@media (max-width: 768px)
+    .App
+        .content
+            padding: 0 40px
+        .title
+            margin-top: 32px
+            margin-bottom: 20px
+            font-size: 30px
+        .paginations
+            .btn
+                font-size: 14px
+
